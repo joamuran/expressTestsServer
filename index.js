@@ -38,6 +38,9 @@ app.use(function(req, res, next) {
 // https://programacion.net/articulo/gestionar_parametros_post_con_node_js_1186
 app.use(body_parser.urlencoded({extended:true}));
 
+// NOU! Afegim el middleware pe gestionar peticions JSON
+app.use(body_parser.json());
+
 /* Middleware per al servidor de pàgines estàtiques */
 app.use(express.static(path.join(__dirname, 'public')));
 
